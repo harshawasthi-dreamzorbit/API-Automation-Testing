@@ -1,0 +1,21 @@
+Test ID	Scenario	Expected Status	Expected Error
+TC_01	Successful trial start	200	N/A
+TC_02	Trial idempotency – repeated request on same machine	200	N/A
+TC_03	Trial already used with same email on another machine	409	TRIAL_ALREADY_USED
+TC_04	Missing email	400	BAD_REQUEST
+TC_05	Invalid mobile number	400	BAD_REQUEST
+TC_06	Already licensed machine	409	ALREADY_LICENSED
+TC_07	Revoked key	403	KEY_REVOKED
+TC_08	Missing fingerprint	400	BAD_REQUEST
+TC_09	Empty fingerprint	400	BAD_REQUEST
+TC_10	Invalid fingerprint format	400	BAD_REQUEST
+TC_11	Invalid email format	400	BAD_REQUEST
+TC_12	Missing business name	400	BAD_REQUEST
+TC_13	Missing owner name	400	BAD_REQUEST
+TC_14	Missing mobile number	400	BAD_REQUEST
+TC_15	Invalid mobile number format	400	BAD_REQUEST
+TC_16	Missing app version	400	BAD_REQUEST
+TC_17	Empty request payload	400	BAD_REQUEST
+TC_18	Null mandatory fields	400	BAD_REQUEST
+TC_19	Invalid machine_info type	400	
+TC_20	Rate limit exceeded	429	RATE_LIMITED
